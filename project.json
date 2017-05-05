@@ -274,8 +274,8 @@
                         "id": "a92549e9-8fb2-bd38-fd1b-65a15db511f3",
                         "type": "Page",
                         "label": "Start",
-                        "x": 357.6975111659565,
-                        "y": 245.65871418582583,
+                        "x": 217.55010468020373,
+                        "y": 239.69499476090016,
                         "parameters": {
                             "title": "Start"
                         },
@@ -529,45 +529,57 @@
                                 "id": "1fef086c-b08e-b0aa-dd61-ccdae7f93971",
                                 "type": "Stack Layout",
                                 "x": 20,
-                                "y": 107,
+                                "y": 143,
                                 "parameters": {
-                                    "orientation": "horizontal",
+                                    "orientation": "vertical",
                                     "itemSpacing": 50,
                                     "alignX": "left",
-                                    "y": 150,
-                                    "x": 300
+                                    "y": 150
                                 },
                                 "ports": [],
                                 "dynamicports": [],
                                 "children": [
                                     {
-                                        "id": "5cf50c8a-d093-3cad-212c-abb5ec245e6a",
-                                        "type": "Text",
+                                        "id": "99bb2a37-d771-cbc4-2835-93a654b103dc",
+                                        "type": "Group",
                                         "version": 2,
                                         "x": 20,
                                         "y": 46,
-                                        "parameters": {
-                                            "color": "#000000",
-                                            "fontSize": 80,
-                                            "y": 0,
-                                            "alignX": "center",
-                                            "fontFamily": "Arial",
-                                            "alignY": "top",
-                                            "sizeMode": "childSize"
-                                        },
-                                        "ports": [],
-                                        "dynamicports": [],
-                                        "children": []
-                                    },
-                                    {
-                                        "id": "5ac27621-6c1a-1e9a-dca2-5788211ed47b",
-                                        "type": "/OnTime icon",
-                                        "x": 20,
-                                        "y": 128,
                                         "parameters": {},
                                         "ports": [],
                                         "dynamicports": [],
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "id": "5cf50c8a-d093-3cad-212c-abb5ec245e6a",
+                                                "type": "Text",
+                                                "version": 2,
+                                                "x": 20,
+                                                "y": 46,
+                                                "parameters": {
+                                                    "color": "#000000",
+                                                    "fontSize": 80,
+                                                    "y": 0,
+                                                    "alignX": "center",
+                                                    "fontFamily": "Arial",
+                                                    "alignY": "top",
+                                                    "sizeMode": "childSize",
+                                                    "x": -100
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            },
+                                            {
+                                                "id": "5ac27621-6c1a-1e9a-dca2-5788211ed47b",
+                                                "type": "/OnTime icon",
+                                                "x": 20,
+                                                "y": 128,
+                                                "parameters": {},
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -586,8 +598,8 @@
                     {
                         "id": "f086b32d-5e63-fedc-0c9f-00fb71af08f5",
                         "type": "Page Navigation",
-                        "x": 637.2346659040593,
-                        "y": 322.33623980578545,
+                        "x": 621.2346659040593,
+                        "y": 233.33623980578545,
                         "parameters": {
                             "destination": "/Timeline/Timeline"
                         },
@@ -16485,7 +16497,8 @@
                                 "unit": "px"
                             },
                             "alignX": "center",
-                            "alignY": "top"
+                            "alignY": "top",
+                            "x": 150
                         },
                         "ports": [],
                         "dynamicports": [],
