@@ -580,6 +580,32 @@
                                                 "children": []
                                             }
                                         ]
+                                    },
+                                    {
+                                        "id": "acd62079-6d44-1700-ed2d-81a5c7e37e9f",
+                                        "type": "/UI Kit/Controls/Small Button Orignal",
+                                        "x": 20,
+                                        "y": 220,
+                                        "parameters": {
+                                            "Align Y": "top",
+                                            "Align X": "center",
+                                            "Color": "#008000",
+                                            "Position X": 0,
+                                            "Width": {
+                                                "value": 40,
+                                                "unit": "%"
+                                            },
+                                            "Height": {
+                                                "value": 80,
+                                                "unit": "px"
+                                            },
+                                            "Rounded": false,
+                                            "Position Y": -200,
+                                            "Label": "See detailed time-view"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
                                     }
                                 ]
                             }
@@ -588,8 +614,8 @@
                     {
                         "id": "1a402320-13ab-d2b0-575c-53e312909380",
                         "type": "/Date and Time",
-                        "x": 252.4693318081185,
-                        "y": 641.6724796115709,
+                        "x": 37.46933180811851,
+                        "y": 524.6724796115709,
                         "parameters": {},
                         "ports": [],
                         "dynamicports": [],
@@ -17897,12 +17923,28 @@
                                 "dynamicports": [],
                                 "children": [
                                     {
-                                        "id": "40039406-f45b-bec7-49cc-cda4136c6b5d",
-                                        "type": "Rectangle",
-                                        "label": "Background",
+                                        "id": "a1053a3e-86c0-ef7d-9760-fbeb5f4e94e3",
+                                        "type": "Image",
+                                        "version": 2,
                                         "x": 20,
                                         "y": 46,
-                                        "parameters": {},
+                                        "parameters": {
+                                            "image": "Timeline v1.png",
+                                            "rotationZ": 90,
+                                            "sizeMode": "childSize",
+                                            "fillMode": "original",
+                                            "clipImage": false,
+                                            "pivotX": {
+                                                "value": 50,
+                                                "unit": "%"
+                                            },
+                                            "pivotY": {
+                                                "value": 50,
+                                                "unit": "%"
+                                            },
+                                            "alignX": "center",
+                                            "alignY": "center"
+                                        },
                                         "ports": [],
                                         "dynamicports": [],
                                         "children": []
@@ -17931,17 +17973,11 @@
                                         ]
                                     },
                                     {
-                                        "id": "ac6f888e-a5b1-2c01-db3a-313912518e64",
-                                        "type": "Circle",
+                                        "id": "3ecc234e-f57f-91f5-8357-16266e729387",
+                                        "type": "/Timeline/Support Text",
                                         "x": 20,
                                         "y": 250,
-                                        "parameters": {
-                                            "color": "#ff0000",
-                                            "width": {
-                                                "value": 500,
-                                                "unit": "px"
-                                            }
-                                        },
+                                        "parameters": {},
                                         "ports": [],
                                         "dynamicports": [],
                                         "children": []
@@ -17953,9 +17989,26 @@
                     {
                         "id": "5b04f809-20d7-5038-c65f-081d197ec980",
                         "type": "/OrientationSensor",
-                        "x": 198.76402076502364,
-                        "y": 556.8044707552469,
+                        "x": 214.76402076502364,
+                        "y": 686.8044707552469,
                         "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "ac6f888e-a5b1-2c01-db3a-313912518e64",
+                        "type": "Circle",
+                        "x": 481.51550699303937,
+                        "y": 685.4844930069606,
+                        "parameters": {
+                            "color": "#ff0000",
+                            "width": {
+                                "value": 500,
+                                "unit": "px"
+                            },
+                            "visible": false
+                        },
                         "ports": [],
                         "dynamicports": [],
                         "children": []
@@ -18002,7 +18055,7 @@
                                 "id": "2840a4bf-2a99-9e3b-cc51-b6c52d44c9b5",
                                 "type": "Stack Layout",
                                 "x": 20,
-                                "y": 61,
+                                "y": 97,
                                 "parameters": {
                                     "orientation": "horizontal"
                                 },
@@ -18279,6 +18332,81 @@
                     }
                 ]
             }
+        },
+        {
+            "name": "/Timeline/Support Text",
+            "graph": {
+                "connections": [],
+                "roots": [
+                    {
+                        "id": "941bb3b0-99f9-7104-cc92-fa7accc94f6d",
+                        "type": "Group",
+                        "version": 2,
+                        "x": 590,
+                        "y": 318,
+                        "parameters": {
+                            "width": {
+                                "value": 500,
+                                "unit": "px"
+                            },
+                            "height": {
+                                "value": 1000,
+                                "unit": "px"
+                            },
+                            "alignX": "center",
+                            "alignY": "center",
+                            "x": 100,
+                            "depth": 2
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "58e468e8-6a92-bdbf-6b78-2df6dc08e21e",
+                                "type": "Rectangle",
+                                "x": 20,
+                                "y": 46,
+                                "parameters": {
+                                    "cornerRadius": 20
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "b653ae11-fd9b-d0a0-f920-0968f4341287",
+                                "type": "Text",
+                                "version": 2,
+                                "x": 20,
+                                "y": 92,
+                                "parameters": {
+                                    "color": "#000000",
+                                    "rotationZ": 90,
+                                    "alignment": "left",
+                                    "verticalAlignment": "top",
+                                    "alignX": "right",
+                                    "alignY": "center",
+                                    "fontSize": 70,
+                                    "text": "EXAMPLE TEXT"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "10360861-d96d-b952-208c-9aac5247b8b9",
+                        "type": "String Selector",
+                        "x": 243,
+                        "y": 345,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
         }
     ],
     "settings": {
@@ -18287,6 +18415,6 @@
         "Default Device.canvasWidth": 1080,
         "Default Device.canvasHeight": 1920
     },
-    "rootNodeId": "109c5915-0af8-a4c9-0aec-dafb3517bd19",
+    "rootNodeId": "c9412b56-f788-f519-e31c-eee1291aa4b2",
     "version": "1"
 }
