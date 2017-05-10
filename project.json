@@ -17882,6 +17882,12 @@
                         "fromProperty": "Is Portrait",
                         "toId": "ac6f888e-a5b1-2c01-db3a-313912518e64",
                         "toProperty": "visible"
+                    },
+                    {
+                        "fromId": "086f4f78-9f89-a61e-4351-a4e060967a50",
+                        "fromProperty": "Timeline idex",
+                        "toId": "3ecc234e-f57f-91f5-8357-16266e729387",
+                        "toProperty": "Timeline index"
                     }
                 ],
                 "roots": [
@@ -17999,8 +18005,8 @@
                     {
                         "id": "ac6f888e-a5b1-2c01-db3a-313912518e64",
                         "type": "Circle",
-                        "x": 481.51550699303937,
-                        "y": 685.4844930069606,
+                        "x": 485.51550699303937,
+                        "y": 739.4844930069606,
                         "parameters": {
                             "color": "#ff0000",
                             "width": {
@@ -18037,6 +18043,18 @@
                         "fromProperty": "outputValue",
                         "toId": "c7932a30-6561-f959-69b7-42b6baec687a",
                         "toProperty": "text"
+                    },
+                    {
+                        "fromId": "23359b8d-bdf8-18ad-2fc8-f71a1c8fecee",
+                        "fromProperty": "remappedValue",
+                        "toId": "3d766244-c154-96b8-09fb-1c9ce7522247",
+                        "toProperty": "inputValue"
+                    },
+                    {
+                        "fromId": "3d766244-c154-96b8-09fb-1c9ce7522247",
+                        "fromProperty": "outputValue",
+                        "toId": "242fac7d-3041-a8a7-a704-60eb86f6b1cf",
+                        "toProperty": "Timeline idex"
                     }
                 ],
                 "roots": [
@@ -18153,7 +18171,8 @@
                     {
                         "id": "dacd311a-d5db-d75d-98cd-0a8e719a1c37",
                         "type": "Javascript2",
-                        "x": 1034.4672357390898,
+                        "label": "Time to hh:mm format",
+                        "x": 1033.4672357390898,
                         "y": 467.17872388625574,
                         "parameters": {
                             "code": "var date = new Date();\n\ndefine({\n    inputs: {\n        inputValue: \"number\"\n    },\n    outputs: {\n        outputValue: \"string\"\n    },\n    setup: function(inputs, outputs) {\n        //date = new Date();\n    },\n    run: function(inputs, outputs) {\n        //var date = new Date(inputs.inputValue);\n        date.setTime(inputs.inputValue);\n        //console.log(d.getMinutes() +d.getSeconds() );\n        outputs.outputValue = (date.getHours() +\":\" + date.getMinutes());\n        \n\n    }\n});"
@@ -18226,6 +18245,57 @@
                                 "index": 3
                             }
                         ],
+                        "children": []
+                    },
+                    {
+                        "id": "3d766244-c154-96b8-09fb-1c9ce7522247",
+                        "type": "Javascript2",
+                        "label": "Time to timeline index",
+                        "x": 1040.8183530713907,
+                        "y": 245.20916090821362,
+                        "parameters": {
+                            "code": "define({\n    inputs: {\n        inputValue: \"number\"\n    },\n    outputs: {\n        outputValue: \"number\"\n    },\n    setup: function(inputs, outputs) {\n\n    },\n    run: function(inputs, outputs) {\n        var value = inputs.inputValue;\n        if(value < 41400000 ){outputs.outputValue = 0;} // Home\n        else if(41400000 < value < 44400000 ){outputs.outputValue = 1;} // Car\n        else if(44400000 < value < 46800000 ){outputs.outputValue = 2;} // Airport\n        else if(46800000 < value < 48600000 ){outputs.outputValue = 3;} // Waiting\n        else if(48600000 < value < 54000000 ){outputs.outputValue = 4;} // Takeoff\n        else if(54000000 < value ){outputs.outputValue = 5;} // Landing\n        console.log(\"input value: \"+ value);\n        //console.log(\"output value: \" + )\n    }\n});"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "inputValue",
+                                "plug": "input",
+                                "type": {
+                                    "name": "number"
+                                },
+                                "group": "Inputs",
+                                "index": 2
+                            },
+                            {
+                                "name": "outputValue",
+                                "type": {
+                                    "name": "number"
+                                },
+                                "plug": "output",
+                                "group": "Outputs",
+                                "index": 3
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "242fac7d-3041-a8a7-a704-60eb86f6b1cf",
+                        "type": "Component Outputs",
+                        "x": 1265.8183530713907,
+                        "y": 276.2091609082136,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Timeline idex",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
                         "children": []
                     }
                 ]
@@ -18336,7 +18406,20 @@
         {
             "name": "/Timeline/Support Text",
             "graph": {
-                "connections": [],
+                "connections": [
+                    {
+                        "fromId": "10360861-d96d-b952-208c-9aac5247b8b9",
+                        "fromProperty": "currentValue",
+                        "toId": "b653ae11-fd9b-d0a0-f920-0968f4341287",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "555506ff-c8b9-ce6d-69bf-e3e0b81501fd",
+                        "fromProperty": "Timeline index",
+                        "toId": "10360861-d96d-b952-208c-9aac5247b8b9",
+                        "toProperty": "index"
+                    }
+                ],
                 "roots": [
                     {
                         "id": "941bb3b0-99f9-7104-cc92-fa7accc94f6d",
@@ -18398,10 +18481,37 @@
                     {
                         "id": "10360861-d96d-b952-208c-9aac5247b8b9",
                         "type": "String Selector",
+                        "label": "String Selector",
                         "x": 243,
                         "y": 345,
-                        "parameters": {},
+                        "parameters": {
+                            "input 0": "Home",
+                            "input 1": "Car",
+                            "input 2": "Airport",
+                            "input 3": "Wating",
+                            "input 4": "Takeoff",
+                            "input 5": "Landing"
+                        },
                         "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "555506ff-c8b9-ce6d-69bf-e3e0b81501fd",
+                        "type": "Component Inputs",
+                        "x": 16.5,
+                        "y": 365,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Timeline index",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            }
+                        ],
                         "dynamicports": [],
                         "children": []
                     }
