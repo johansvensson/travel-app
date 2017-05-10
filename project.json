@@ -18047,11 +18047,11 @@
                     {
                         "fromId": "23359b8d-bdf8-18ad-2fc8-f71a1c8fecee",
                         "fromProperty": "remappedValue",
-                        "toId": "3d766244-c154-96b8-09fb-1c9ce7522247",
+                        "toId": "683a7f30-11c6-ebd5-3fcd-691cb39f39a0",
                         "toProperty": "inputValue"
                     },
                     {
-                        "fromId": "3d766244-c154-96b8-09fb-1c9ce7522247",
+                        "fromId": "683a7f30-11c6-ebd5-3fcd-691cb39f39a0",
                         "fromProperty": "outputValue",
                         "toId": "242fac7d-3041-a8a7-a704-60eb86f6b1cf",
                         "toProperty": "Timeline idex"
@@ -18248,13 +18248,31 @@
                         "children": []
                     },
                     {
-                        "id": "3d766244-c154-96b8-09fb-1c9ce7522247",
+                        "id": "242fac7d-3041-a8a7-a704-60eb86f6b1cf",
+                        "type": "Component Outputs",
+                        "x": 1264.8183530713907,
+                        "y": 275.2091609082136,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Timeline idex",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "683a7f30-11c6-ebd5-3fcd-691cb39f39a0",
                         "type": "Javascript2",
-                        "label": "Time to timeline index",
-                        "x": 1040.8183530713907,
-                        "y": 245.20916090821362,
+                        "x": 996.8183530713907,
+                        "y": 287.2091609082136,
                         "parameters": {
-                            "code": "define({\n    inputs: {\n        inputValue: \"number\"\n    },\n    outputs: {\n        outputValue: \"number\"\n    },\n    setup: function(inputs, outputs) {\n\n    },\n    run: function(inputs, outputs) {\n        var value = inputs.inputValue;\n        if(value < 41400000 ){outputs.outputValue = 0;} // Home\n        else if(41400000 < value < 44400000 ){outputs.outputValue = 1;} // Car\n        else if(44400000 < value < 46800000 ){outputs.outputValue = 2;} // Airport\n        else if(46800000 < value < 48600000 ){outputs.outputValue = 3;} // Waiting\n        else if(48600000 < value < 54000000 ){outputs.outputValue = 4;} // Takeoff\n        else if(54000000 < value ){outputs.outputValue = 5;} // Landing\n        console.log(\"input value: \"+ value);\n        //console.log(\"output value: \" + )\n    }\n});"
+                            "code": "define({\n    inputs: {\n        inputValue: \"number\"\n    },\n    outputs: {\n        outputValue: \"number\"\n    },\n    setup: function(inputs, outputs) {\n\n    },\n    run: function(inputs, outputs) {\n        var value = inputs.inputValue;\n        switch(true){\n            case (value < 41400000):\n            outputs.outputValue = 0; // Home\n            break;\n            case (value < 44400000):\n            outputs.outputValue = 1; // Car\n            break;\n            case (value < 46800000):\n            outputs.outputValue = 2; //At airport\n            break;\n            case (value < 48600000):\n            outputs.outputValue = 3;  // Waiting\n            break;\n             case (value < 54000000):\n            outputs.outputValue = 4; // Takeoff\n            break;\n             case (value < 57600000):\n            outputs.outputValue = 5; // Landing\n            break;\n        }\n        //console.log(\"input value: \"+ value);\n        //console.log(\"output value: \" + outputs.outputValue);\n    }\n});"
                         },
                         "ports": [],
                         "dynamicports": [
@@ -18277,25 +18295,6 @@
                                 "index": 3
                             }
                         ],
-                        "children": []
-                    },
-                    {
-                        "id": "242fac7d-3041-a8a7-a704-60eb86f6b1cf",
-                        "type": "Component Outputs",
-                        "x": 1265.8183530713907,
-                        "y": 276.2091609082136,
-                        "parameters": {},
-                        "ports": [
-                            {
-                                "name": "Timeline idex",
-                                "plug": "input",
-                                "type": {
-                                    "name": "*"
-                                },
-                                "index": 1
-                            }
-                        ],
-                        "dynamicports": [],
                         "children": []
                     }
                 ]
