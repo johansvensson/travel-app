@@ -124,19 +124,25 @@
                         "fromProperty": "currentValue",
                         "toId": "426c9a24-14fe-0f7a-fcf3-0acd73310b27",
                         "toProperty": "Button Img Path"
+                    },
+                    {
+                        "fromId": "a89471ed-6578-f37d-5b89-79f6d5354994",
+                        "fromProperty": "remappedValue",
+                        "toId": "3402a1f9-ee18-2008-4568-7c485dc6f6b7",
+                        "toProperty": "Opacity"
                     }
                 ],
                 "roots": [
                     {
                         "id": "8fc65aa7-4412-229e-738a-838c371b40c9",
                         "type": "Drag",
-                        "x": 31.187626013722763,
+                        "x": 30.003188640298845,
                         "y": 497.8690665120331,
                         "parameters": {
                             "axis": "1",
                             "position 0": 300,
                             "startAt": "position 1",
-                            "snapBehavior": "everyPosition",
+                            "snapBehavior": "closestPosition",
                             "clampDragPosition.min": 300,
                             "clampDragPosition.enabled": false,
                             "position 1": 1720
@@ -204,8 +210,8 @@
                     {
                         "id": "a89471ed-6578-f37d-5b89-79f6d5354994",
                         "type": "Number Remapper",
-                        "x": 20.101644269336248,
-                        "y": 641.1502508715905,
+                        "x": -11.389162341575343,
+                        "y": 681.4584833335575,
                         "parameters": {
                             "minInputValue": 500,
                             "maxInputValue": 1750
@@ -487,10 +493,16 @@
                         "toProperty": "text"
                     },
                     {
-                        "fromId": "739b1646-dd8d-9fbe-d20f-52e571d00a12",
-                        "fromProperty": "touch.tap",
+                        "fromId": "acd62079-6d44-1700-ed2d-81a5c7e37e9f",
+                        "fromProperty": "Tap",
                         "toId": "f086b32d-5e63-fedc-0c9f-00fb71af08f5",
                         "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "e20c0ddc-1db1-f9c4-387b-bcb792503ddb",
+                        "fromProperty": "Opacity",
+                        "toId": "e79b55c9-c0e1-f3ed-a9d0-0769758b54a1",
+                        "toProperty": "opacity"
                     }
                 ],
                 "roots": [
@@ -582,30 +594,42 @@
                                         ]
                                     },
                                     {
-                                        "id": "acd62079-6d44-1700-ed2d-81a5c7e37e9f",
-                                        "type": "/UI Kit/Controls/Small Button Orignal",
+                                        "id": "e79b55c9-c0e1-f3ed-a9d0-0769758b54a1",
+                                        "type": "Group",
+                                        "version": 2,
                                         "x": 20,
                                         "y": 220,
-                                        "parameters": {
-                                            "Align Y": "top",
-                                            "Align X": "center",
-                                            "Color": "#008000",
-                                            "Position X": 0,
-                                            "Width": {
-                                                "value": 40,
-                                                "unit": "%"
-                                            },
-                                            "Height": {
-                                                "value": 80,
-                                                "unit": "px"
-                                            },
-                                            "Rounded": false,
-                                            "Position Y": -200,
-                                            "Label": "See detailed time-view"
-                                        },
+                                        "parameters": {},
                                         "ports": [],
                                         "dynamicports": [],
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "id": "acd62079-6d44-1700-ed2d-81a5c7e37e9f",
+                                                "type": "/UI Kit/Controls/Small Button Orignal",
+                                                "x": 20,
+                                                "y": 82,
+                                                "parameters": {
+                                                    "Align Y": "top",
+                                                    "Align X": "center",
+                                                    "Color": "#008000",
+                                                    "Position X": 0,
+                                                    "Width": {
+                                                        "value": 40,
+                                                        "unit": "%"
+                                                    },
+                                                    "Height": {
+                                                        "value": 80,
+                                                        "unit": "px"
+                                                    },
+                                                    "Rounded": false,
+                                                    "Position Y": -100,
+                                                    "Label": "See detailed time-view"
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -624,12 +648,31 @@
                     {
                         "id": "f086b32d-5e63-fedc-0c9f-00fb71af08f5",
                         "type": "Page Navigation",
-                        "x": 621.2346659040593,
-                        "y": 233.33623980578545,
+                        "x": 643.2346659040593,
+                        "y": 593.3362398057855,
                         "parameters": {
                             "destination": "/Timeline/Timeline"
                         },
                         "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "e20c0ddc-1db1-f9c4-387b-bcb792503ddb",
+                        "type": "Component Inputs",
+                        "x": 46.90133257072597,
+                        "y": 665.8362398057855,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Opacity",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            }
+                        ],
                         "dynamicports": [],
                         "children": []
                     }
@@ -752,8 +795,8 @@
                                 "id": "5052556b-1933-b8a2-2970-5c650ec847f3",
                                 "type": "Image",
                                 "version": 2,
-                                "x": 20,
-                                "y": 82,
+                                "x": 318,
+                                "y": 452,
                                 "parameters": {
                                     "image": "UIKit/images/arrow.png",
                                     "alignX": "left",
@@ -773,8 +816,8 @@
                             {
                                 "id": "d222dbff-2d61-4e28-4eb6-e56fd5df1525",
                                 "type": "Stack Layout",
-                                "x": 20,
-                                "y": 46,
+                                "x": 318,
+                                "y": 549,
                                 "parameters": {},
                                 "ports": [],
                                 "dynamicports": [],
@@ -783,8 +826,8 @@
                                         "id": "87383fd3-74ff-f9c7-e239-1c103ea0e7ee",
                                         "type": "Text",
                                         "version": 2,
-                                        "x": 20,
-                                        "y": 46,
+                                        "x": 338,
+                                        "y": 595,
                                         "parameters": {
                                             "color": "#000000",
                                             "text": "Checklist",
@@ -801,8 +844,8 @@
                                         "id": "0cb4c8a9-f9b7-89c6-01d1-3bd66923fbfb",
                                         "type": "Text",
                                         "version": 2,
-                                        "x": 20,
-                                        "y": 107,
+                                        "x": 338,
+                                        "y": 656,
                                         "parameters": {
                                             "color": "#000000",
                                             "text": "Swipe up to check",
@@ -817,8 +860,8 @@
                                         "id": "42477bd5-e442-5264-7b8a-80ced5c5b664",
                                         "type": "Group",
                                         "version": 2,
-                                        "x": 20,
-                                        "y": 168,
+                                        "x": 338,
+                                        "y": 717,
                                         "parameters": {},
                                         "ports": [],
                                         "dynamicports": [],
@@ -826,8 +869,8 @@
                                             {
                                                 "id": "3b21a15e-f8e6-bfbb-8b93-0365d7c75e9d",
                                                 "type": "Rectangle",
-                                                "x": 20,
-                                                "y": 46,
+                                                "x": 358,
+                                                "y": 763,
                                                 "parameters": {
                                                     "height": {
                                                         "value": 40,
@@ -846,8 +889,8 @@
                                             {
                                                 "id": "1fc252a8-9efd-8ccc-7909-dbbc81ca7c69",
                                                 "type": "Rectangle",
-                                                "x": 20,
-                                                "y": 92,
+                                                "x": 358,
+                                                "y": 809,
                                                 "parameters": {
                                                     "cornerRadius": 20,
                                                     "height": {
@@ -865,8 +908,8 @@
                                                 "id": "633ebcdf-3a6e-ab02-e96d-39478ea5c461",
                                                 "type": "Text",
                                                 "version": 2,
-                                                "x": 20,
-                                                "y": 194,
+                                                "x": 358,
+                                                "y": 911,
                                                 "parameters": {
                                                     "alignX": "center",
                                                     "color": "#000000",
@@ -886,8 +929,8 @@
                             {
                                 "id": "d511dfe8-aa9b-b673-b510-a069f4004574",
                                 "type": "Stack Layout",
-                                "x": 20,
-                                "y": 638,
+                                "x": 318,
+                                "y": 1008,
                                 "parameters": {
                                     "height": {
                                         "value": 500,
@@ -901,8 +944,8 @@
                                     {
                                         "id": "e782abbd-5854-45d1-1f64-ced63dce3ca5",
                                         "type": "/Drag items",
-                                        "x": 20,
-                                        "y": 82,
+                                        "x": 338,
+                                        "y": 1090,
                                         "parameters": {
                                             "Text": "Important!",
                                             "Title": "Passport"
@@ -914,8 +957,8 @@
                                     {
                                         "id": "412dc936-dbf4-0d77-6303-0a125d7a0009",
                                         "type": "/Drag items",
-                                        "x": 20,
-                                        "y": 184,
+                                        "x": 338,
+                                        "y": 1192,
                                         "parameters": {
                                             "Text": "The blue one",
                                             "Title": "Toothbrush"
@@ -927,8 +970,8 @@
                                     {
                                         "id": "d3a1f13c-6d30-dd06-abac-d14e9d64acb5",
                                         "type": "/Drag items",
-                                        "x": 20,
-                                        "y": 286,
+                                        "x": 338,
+                                        "y": 1294,
                                         "parameters": {
                                             "Text": "Small bottles",
                                             "Title": "Shampoo"
@@ -1198,7 +1241,7 @@
                                         "type": "Text",
                                         "version": 2,
                                         "x": 20,
-                                        "y": 399,
+                                        "y": 439,
                                         "parameters": {
                                             "text": "DONE!",
                                             "x": 0,
@@ -1209,7 +1252,8 @@
                                             "alignment": "center",
                                             "verticalAlignment": "center",
                                             "rotationZ": -20,
-                                            "fontSize": 50
+                                            "fontSize": 50,
+                                            "color": "#000000"
                                         },
                                         "ports": [],
                                         "dynamicports": [],
@@ -16402,18 +16446,7 @@
                                                 "parameters": {
                                                     "Align X": "center",
                                                     "Align Y": "top",
-                                                    "Position X": 300,
-                                                    "Position Y": 270,
-                                                    "Height": {
-                                                        "value": 90,
-                                                        "unit": "px"
-                                                    },
-                                                    "Width": {
-                                                        "value": 60,
-                                                        "unit": "%"
-                                                    },
-                                                    "Rounded": true,
-                                                    "Image Path": "ticket.png"
+                                                    "Position X": 300
                                                 },
                                                 "ports": [],
                                                 "dynamicports": [],
@@ -17419,6 +17452,12 @@
                         "fromProperty": "Image Path",
                         "toId": "119ce337-23de-7d4f-6f1d-d8778abfea52",
                         "toProperty": "image"
+                    },
+                    {
+                        "fromId": "d38a309e-6bb5-24c7-9971-fcb379adc4bf",
+                        "fromProperty": "Rotation Z",
+                        "toId": "6a000b70-62f2-bf08-d79a-5d9dc027da12",
+                        "toProperty": "rotationZ"
                     }
                 ],
                 "roots": [
@@ -17528,7 +17567,7 @@
                                     "name": "*"
                                 },
                                 "group": "Dimensions",
-                                "index": 4
+                                "index": 5
                             },
                             {
                                 "name": "Height",
@@ -17537,7 +17576,7 @@
                                     "name": "*"
                                 },
                                 "group": "Dimensions",
-                                "index": 5
+                                "index": 6
                             },
                             {
                                 "name": "Color",
@@ -17546,7 +17585,7 @@
                                     "name": "*"
                                 },
                                 "group": "Appearance",
-                                "index": 6
+                                "index": 7
                             },
                             {
                                 "name": "Label",
@@ -17555,7 +17594,7 @@
                                     "name": "*"
                                 },
                                 "group": "Appearance",
-                                "index": 7
+                                "index": 8
                             },
                             {
                                 "name": "Rounded",
@@ -17564,7 +17603,7 @@
                                     "name": "*"
                                 },
                                 "group": "Appearance",
-                                "index": 8
+                                "index": 9
                             },
                             {
                                 "name": "Position X",
@@ -17582,7 +17621,7 @@
                                     "name": "*"
                                 },
                                 "group": "Placement",
-                                "index": 8
+                                "index": 4
                             },
                             {
                                 "name": "Image Path",
@@ -17591,7 +17630,16 @@
                                     "name": "*"
                                 },
                                 "group": "Appearance",
-                                "index": 9
+                                "index": 10
+                            },
+                            {
+                                "name": "Rotation Z",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "group": "Placement",
+                                "index": 10
                             }
                         ],
                         "dynamicports": [],
@@ -17878,16 +17926,46 @@
                         "toProperty": "target"
                     },
                     {
-                        "fromId": "5b04f809-20d7-5038-c65f-081d197ec980",
-                        "fromProperty": "Is Portrait",
-                        "toId": "ac6f888e-a5b1-2c01-db3a-313912518e64",
-                        "toProperty": "visible"
-                    },
-                    {
                         "fromId": "086f4f78-9f89-a61e-4351-a4e060967a50",
                         "fromProperty": "Timeline idex",
                         "toId": "3ecc234e-f57f-91f5-8357-16266e729387",
                         "toProperty": "Timeline index"
+                    },
+                    {
+                        "fromId": "67c97f84-1e5b-ea3c-d2fd-343c3e6e4418",
+                        "fromProperty": "touch.tap",
+                        "toId": "6723d0ad-848c-c2c1-cc19-6f512325ebb6",
+                        "toProperty": "back"
+                    },
+                    {
+                        "fromId": "0eac41a4-c4eb-5c76-3604-960c6878fb69",
+                        "fromProperty": "remappedValue",
+                        "toId": "67c97f84-1e5b-ea3c-d2fd-343c3e6e4418",
+                        "toProperty": "x"
+                    },
+                    {
+                        "fromId": "086f4f78-9f89-a61e-4351-a4e060967a50",
+                        "fromProperty": "Y pos",
+                        "toId": "0eac41a4-c4eb-5c76-3604-960c6878fb69",
+                        "toProperty": "inputValue"
+                    },
+                    {
+                        "fromId": "73d99196-6e49-9371-de7c-d65f0beef870",
+                        "fromProperty": "touch.tap",
+                        "toId": "ff76ef04-e4d1-455b-5e40-29e24c7a5d7b",
+                        "toProperty": "navigate"
+                    },
+                    {
+                        "fromId": "9a5a71a2-2a9a-8c26-ec2a-b098ed8d9b1a",
+                        "fromProperty": "Value",
+                        "toId": "c91d2065-6ee4-210b-21d7-852c37d6ca89",
+                        "toProperty": "visible"
+                    },
+                    {
+                        "fromId": "040d6f64-1043-62da-6739-7c171df77a42",
+                        "fromProperty": "touch.tap",
+                        "toId": "cfdad2f7-8106-287e-31f4-70180a9741cc",
+                        "toProperty": "navigate"
                     }
                 ],
                 "roots": [
@@ -17911,9 +17989,10 @@
                         "type": "Page",
                         "label": "Timeline",
                         "x": 511.51550699303937,
-                        "y": 269.48449300696063,
+                        "y": 268.48449300696063,
                         "parameters": {
-                            "title": "Timeline"
+                            "title": "Timeline",
+                            "transition": "default"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -17982,8 +18061,98 @@
                                         "id": "3ecc234e-f57f-91f5-8357-16266e729387",
                                         "type": "/Timeline/Support Text",
                                         "x": 20,
-                                        "y": 250,
+                                        "y": 286,
                                         "parameters": {},
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "67c97f84-1e5b-ea3c-d2fd-343c3e6e4418",
+                                        "type": "Image",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 388,
+                                        "parameters": {
+                                            "image": "UIKit/images/back.png",
+                                            "alignX": "right",
+                                            "color": "#c0c0c0",
+                                            "pivotZ": 0,
+                                            "rotationZ": 90,
+                                            "scaleX": 2,
+                                            "scaleY": 2,
+                                            "x": -200,
+                                            "y": 55
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "73d99196-6e49-9371-de7c-d65f0beef870",
+                                        "type": "Group",
+                                        "version": 2,
+                                        "label": "Tap House",
+                                        "x": 551.5155069930394,
+                                        "y": 814.4844930069606,
+                                        "parameters": {
+                                            "width": {
+                                                "value": 200,
+                                                "unit": "px"
+                                            },
+                                            "height": {
+                                                "value": 200,
+                                                "unit": "px"
+                                            },
+                                            "depth": 3,
+                                            "x": 150,
+                                            "y": 100
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "c91d2065-6ee4-210b-21d7-852c37d6ca89",
+                                        "type": "Image",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 582,
+                                        "parameters": {
+                                            "image": "check.png",
+                                            "x": 300,
+                                            "y": 100,
+                                            "rotationZ": 90,
+                                            "scaleX": 0.5,
+                                            "scaleY": 0.5,
+                                            "color": "#008000",
+                                            "visible": true,
+                                            "blendMode": "alpha"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "040d6f64-1043-62da-6739-7c171df77a42",
+                                        "type": "Group",
+                                        "version": 2,
+                                        "label": "Tap Car",
+                                        "x": 20,
+                                        "y": 679,
+                                        "parameters": {
+                                            "width": {
+                                                "value": 200,
+                                                "unit": "px"
+                                            },
+                                            "height": {
+                                                "value": 200,
+                                                "unit": "px"
+                                            },
+                                            "depth": 3,
+                                            "x": 150,
+                                            "y": 355
+                                        },
                                         "ports": [],
                                         "dynamicports": [],
                                         "children": []
@@ -17993,27 +18162,72 @@
                         ]
                     },
                     {
-                        "id": "5b04f809-20d7-5038-c65f-081d197ec980",
-                        "type": "/OrientationSensor",
-                        "x": 214.76402076502364,
-                        "y": 686.8044707552469,
+                        "id": "6723d0ad-848c-c2c1-cc19-6f512325ebb6",
+                        "type": "Page Navigation Back",
+                        "x": 782.9608583017246,
+                        "y": 713.334086100808,
                         "parameters": {},
                         "ports": [],
                         "dynamicports": [],
                         "children": []
                     },
                     {
-                        "id": "ac6f888e-a5b1-2c01-db3a-313912518e64",
-                        "type": "Circle",
-                        "x": 485.51550699303937,
-                        "y": 739.4844930069606,
+                        "id": "0eac41a4-c4eb-5c76-3604-960c6878fb69",
+                        "type": "Number Remapper",
+                        "x": 288.96085830172456,
+                        "y": 693.334086100808,
                         "parameters": {
-                            "color": "#ff0000",
-                            "width": {
-                                "value": 500,
-                                "unit": "px"
-                            },
-                            "visible": false
+                            "minInputValue": -620,
+                            "maxInputValue": -810,
+                            "minOutputValue": -50,
+                            "maxOutputValue": -200
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "ff76ef04-e4d1-455b-5e40-29e24c7a5d7b",
+                        "type": "Page Navigation",
+                        "x": 792.1275249683913,
+                        "y": 824.6674194341414,
+                        "parameters": {
+                            "destination": "/Checklist"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "9a5a71a2-2a9a-8c26-ec2a-b098ed8d9b1a",
+                        "type": "Receive Message",
+                        "x": 321.12752496839124,
+                        "y": 911.6674194341414,
+                        "parameters": {
+                            "topic": "FullChecklist"
+                        },
+                        "ports": [
+                            {
+                                "name": "Value",
+                                "plug": "outputs",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "cfdad2f7-8106-287e-31f4-70180a9741cc",
+                        "type": "Page Navigation",
+                        "x": 784.1275249683913,
+                        "y": 1007.6674194341414,
+                        "parameters": {
+                            "destination": "/Full transport info/Transit Info"
                         },
                         "ports": [],
                         "dynamicports": [],
@@ -18055,6 +18269,12 @@
                         "fromProperty": "outputValue",
                         "toId": "242fac7d-3041-a8a7-a704-60eb86f6b1cf",
                         "toProperty": "Timeline idex"
+                    },
+                    {
+                        "fromId": "66ad9420-5789-965a-5379-66f78158356a",
+                        "fromProperty": "screenY",
+                        "toId": "242fac7d-3041-a8a7-a704-60eb86f6b1cf",
+                        "toProperty": "Y pos"
                     }
                 ],
                 "roots": [
@@ -18250,7 +18470,7 @@
                     {
                         "id": "242fac7d-3041-a8a7-a704-60eb86f6b1cf",
                         "type": "Component Outputs",
-                        "x": 1264.8183530713907,
+                        "x": 1263.8183530713907,
                         "y": 275.2091609082136,
                         "parameters": {},
                         "ports": [
@@ -18261,6 +18481,14 @@
                                     "name": "*"
                                 },
                                 "index": 1
+                            },
+                            {
+                                "name": "Y pos",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 2
                             }
                         ],
                         "dynamicports": [],
@@ -18407,6 +18635,12 @@
             "graph": {
                 "connections": [
                     {
+                        "fromId": "555506ff-c8b9-ce6d-69bf-e3e0b81501fd",
+                        "fromProperty": "Timeline index",
+                        "toId": "10360861-d96d-b952-208c-9aac5247b8b9",
+                        "toProperty": "index"
+                    },
+                    {
                         "fromId": "10360861-d96d-b952-208c-9aac5247b8b9",
                         "fromProperty": "currentValue",
                         "toId": "b653ae11-fd9b-d0a0-f920-0968f4341287",
@@ -18415,8 +18649,14 @@
                     {
                         "fromId": "555506ff-c8b9-ce6d-69bf-e3e0b81501fd",
                         "fromProperty": "Timeline index",
-                        "toId": "10360861-d96d-b952-208c-9aac5247b8b9",
+                        "toId": "28e4b581-fc37-6dda-51e6-3790df0f542f",
                         "toProperty": "index"
+                    },
+                    {
+                        "fromId": "28e4b581-fc37-6dda-51e6-3790df0f542f",
+                        "fromProperty": "currentValue",
+                        "toId": "4b8e51ad-2f3b-c4ce-fffc-0319c76c0911",
+                        "toProperty": "text"
                     }
                 ],
                 "roots": [
@@ -18459,17 +18699,60 @@
                                 "id": "b653ae11-fd9b-d0a0-f920-0968f4341287",
                                 "type": "Text",
                                 "version": 2,
+                                "label": "Header",
                                 "x": 20,
                                 "y": 92,
                                 "parameters": {
                                     "color": "#000000",
                                     "rotationZ": 90,
-                                    "alignment": "left",
+                                    "alignment": "center",
                                     "verticalAlignment": "top",
-                                    "alignX": "right",
+                                    "alignX": "left",
                                     "alignY": "center",
-                                    "fontSize": 70,
-                                    "text": "EXAMPLE TEXT"
+                                    "fontSize": 80,
+                                    "text": "EXAMPLE TEXT",
+                                    "sizeMode": "explicit",
+                                    "width": {
+                                        "value": 1000,
+                                        "unit": "px"
+                                    },
+                                    "height": {
+                                        "value": 100,
+                                        "unit": "px"
+                                    },
+                                    "y": 0,
+                                    "x": -60,
+                                    "lineHeight": 0
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "4b8e51ad-2f3b-c4ce-fffc-0319c76c0911",
+                                "type": "Text",
+                                "version": 2,
+                                "label": "Detailed description",
+                                "x": 20,
+                                "y": 189,
+                                "parameters": {
+                                    "sizeMode": "explicit",
+                                    "width": {
+                                        "value": 900,
+                                        "unit": "px"
+                                    },
+                                    "alignX": "left",
+                                    "alignY": "center",
+                                    "height": {
+                                        "value": 350,
+                                        "unit": "px"
+                                    },
+                                    "rotationZ": 90,
+                                    "y": 0,
+                                    "x": -250,
+                                    "color": "#000000",
+                                    "text": "More detailed description",
+                                    "fontSize": 45
                                 },
                                 "ports": [],
                                 "dynamicports": [],
@@ -18481,13 +18764,13 @@
                         "id": "10360861-d96d-b952-208c-9aac5247b8b9",
                         "type": "String Selector",
                         "label": "String Selector",
-                        "x": 243,
-                        "y": 345,
+                        "x": 245.09672441184148,
+                        "y": 344.9032755881585,
                         "parameters": {
                             "input 0": "Home",
-                            "input 1": "Car",
-                            "input 2": "Airport",
-                            "input 3": "Wating",
+                            "input 1": "Transit to Airport",
+                            "input 2": "At the Airport",
+                            "input 3": "Wating for boarding",
                             "input 4": "Takeoff",
                             "input 5": "Landing"
                         },
@@ -18498,8 +18781,8 @@
                     {
                         "id": "555506ff-c8b9-ce6d-69bf-e3e0b81501fd",
                         "type": "Component Inputs",
-                        "x": 16.5,
-                        "y": 365,
+                        "x": -9.821385884196957,
+                        "y": 348.5491338223769,
                         "parameters": {},
                         "ports": [
                             {
@@ -18513,6 +18796,1023 @@
                         ],
                         "dynamicports": [],
                         "children": []
+                    },
+                    {
+                        "id": "28e4b581-fc37-6dda-51e6-3790df0f542f",
+                        "type": "String Selector",
+                        "x": 250.72341989034032,
+                        "y": 475.64097246189243,
+                        "parameters": {
+                            "input 0": "I need to pack all my belongings for the trip. Since I only have one bag I need to select which to bring. I try to remember all important stuffs., so I dont forget somthing at home.  ",
+                            "input 1": "There are many ways to get to the airport. My family might take a taxi, train or car.",
+                            "input 2": "When I get to the airport, I will go check in at the Aer Lingus desk. Sometimes this line may be long. That's okay, I can wait patiently with my family. ",
+                            "input 3": "The departures hall is very crowded and loud. There are many people rushing to get to their airplanes. But we can look around the shops or have something to eat while we wait to go to our gate.",
+                            "input 4": "During take off, the airplane will go very fast. It will be very loud and start to shake. Then the airplane will lift off the ground. I might feel nervous, but I know to stay calm. During take off my ears may pop and hurt. I may feel scared, but I will remember that this is normal and it will go away soon.",
+                            "input 5": "As the airplane flies lower to land, the front of the airplane will slant down. I might feel like I am leaning forward. When we touch down on the runway, I may feel a big bump. The airplane was flying very fast, so it may take a few moments to slow down. "
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/Checklist",
+            "graph": {
+                "connections": [],
+                "roots": [
+                    {
+                        "id": "ba49d443-a20c-5a19-db76-1c783efc2235",
+                        "type": "Page",
+                        "x": 574,
+                        "y": 339,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "2d7bdc0f-8dbf-4511-a7e3-c01feeaaacd9",
+                                "type": "Rectangle",
+                                "x": 604,
+                                "y": 363,
+                                "parameters": {},
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "f44660cc-4be7-8ffe-6071-49cdc0562707",
+                                "type": "/DragView Static",
+                                "x": 613,
+                                "y": 424,
+                                "parameters": {},
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/DragView Static",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "9e1ddf98-03b0-0ec5-a7f7-2fd9818ad9e8",
+                        "fromProperty": "childCount",
+                        "toId": "1c182db0-b7ae-80cb-0636-d89151975c05",
+                        "toProperty": "maxInputValue"
+                    },
+                    {
+                        "fromId": "2250217a-c8d7-24ea-baf7-e42aa73d37ec",
+                        "fromProperty": "IsDone",
+                        "toId": "bd8f6911-5454-e53c-7fdd-79a0fbfeb1bc",
+                        "toProperty": "increase"
+                    },
+                    {
+                        "fromId": "e2378473-f8c3-8ee3-f695-f2c333ddfc14",
+                        "fromProperty": "IsDone",
+                        "toId": "bd8f6911-5454-e53c-7fdd-79a0fbfeb1bc",
+                        "toProperty": "increase"
+                    },
+                    {
+                        "fromId": "bd8f6911-5454-e53c-7fdd-79a0fbfeb1bc",
+                        "fromProperty": "currentCount",
+                        "toId": "1c182db0-b7ae-80cb-0636-d89151975c05",
+                        "toProperty": "inputValue"
+                    },
+                    {
+                        "fromId": "2250217a-c8d7-24ea-baf7-e42aa73d37ec",
+                        "fromProperty": "NotDone",
+                        "toId": "bd8f6911-5454-e53c-7fdd-79a0fbfeb1bc",
+                        "toProperty": "decrease"
+                    },
+                    {
+                        "fromId": "e2378473-f8c3-8ee3-f695-f2c333ddfc14",
+                        "fromProperty": "NotDone",
+                        "toId": "bd8f6911-5454-e53c-7fdd-79a0fbfeb1bc",
+                        "toProperty": "decrease"
+                    },
+                    {
+                        "fromId": "9061e2bb-c403-c4be-6b62-be53e2ce4d1a",
+                        "fromProperty": "IsDone",
+                        "toId": "bd8f6911-5454-e53c-7fdd-79a0fbfeb1bc",
+                        "toProperty": "increase"
+                    },
+                    {
+                        "fromId": "9061e2bb-c403-c4be-6b62-be53e2ce4d1a",
+                        "fromProperty": "NotDone",
+                        "toId": "bd8f6911-5454-e53c-7fdd-79a0fbfeb1bc",
+                        "toProperty": "decrease"
+                    },
+                    {
+                        "fromId": "1c182db0-b7ae-80cb-0636-d89151975c05",
+                        "fromProperty": "remappedValue",
+                        "toId": "18058cc9-2465-8042-9552-e854b951d0bb",
+                        "toProperty": "targetValue"
+                    },
+                    {
+                        "fromId": "18058cc9-2465-8042-9552-e854b951d0bb",
+                        "fromProperty": "currentValue",
+                        "toId": "7a018b50-a109-9f36-4a1e-1c62df41e59d",
+                        "toProperty": "width"
+                    },
+                    {
+                        "fromId": "18058cc9-2465-8042-9552-e854b951d0bb",
+                        "fromProperty": "currentValue",
+                        "toId": "6ba740ca-b1ad-5dad-a782-a0745fb19311",
+                        "toProperty": "currentValue"
+                    },
+                    {
+                        "fromId": "6ba740ca-b1ad-5dad-a782-a0745fb19311",
+                        "fromProperty": "result",
+                        "toId": "4b4d8a4a-9160-1012-4ec3-648fca5f895e",
+                        "toProperty": "visible"
+                    },
+                    {
+                        "fromId": "43a8c3dc-e2e1-2e0e-a8d2-4fbfaa239ad6",
+                        "fromProperty": "result",
+                        "toId": "7a018b50-a109-9f36-4a1e-1c62df41e59d",
+                        "toProperty": "color"
+                    },
+                    {
+                        "fromId": "6ba740ca-b1ad-5dad-a782-a0745fb19311",
+                        "fromProperty": "result",
+                        "toId": "43a8c3dc-e2e1-2e0e-a8d2-4fbfaa239ad6",
+                        "toProperty": "blendValue"
+                    },
+                    {
+                        "fromId": "5f6102a1-40f1-6d54-5a36-92942c55be30",
+                        "fromProperty": "touch.tap",
+                        "toId": "16f532f4-5603-ab6d-a7af-0fa28109cb6c",
+                        "toProperty": "back"
+                    },
+                    {
+                        "fromId": "6ba740ca-b1ad-5dad-a782-a0745fb19311",
+                        "fromProperty": "result",
+                        "toId": "7d0767b2-cad6-e615-96b4-1ca0a5486c09",
+                        "toProperty": "All checked"
+                    },
+                    {
+                        "fromId": "6ba740ca-b1ad-5dad-a782-a0745fb19311",
+                        "fromProperty": "result",
+                        "toId": "53b49557-fc44-b896-3902-adf5760afc49",
+                        "toProperty": "Value"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "e82566d5-59e4-b054-38b8-7ca553360d4d",
+                        "type": "Group",
+                        "version": 2,
+                        "x": 803.7772845202569,
+                        "y": 460,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "5f6102a1-40f1-6d54-5a36-92942c55be30",
+                                "type": "Image",
+                                "version": 2,
+                                "x": 20,
+                                "y": 46,
+                                "parameters": {
+                                    "image": "UIKit/images/arrow.png",
+                                    "alignX": "left",
+                                    "color": "#000000",
+                                    "x": 50,
+                                    "rotationX": 0,
+                                    "rotationY": 0,
+                                    "rotationZ": 180,
+                                    "y": 25,
+                                    "scaleX": 1.2,
+                                    "scaleY": 1.2
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "33818432-279b-f09c-caf6-e890b0527428",
+                                "type": "Stack Layout",
+                                "x": 318,
+                                "y": 549,
+                                "parameters": {},
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "a93503a2-94fe-eeb7-152b-d706b5724db2",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 338,
+                                        "y": 595,
+                                        "parameters": {
+                                            "color": "#000000",
+                                            "text": "Checklist",
+                                            "fontSize": 80,
+                                            "alignment": "left",
+                                            "verticalAlignment": "top",
+                                            "alignX": "center"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "4cb1655e-aeca-9f8b-1a79-560c01961660",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 338,
+                                        "y": 656,
+                                        "parameters": {
+                                            "color": "#000000",
+                                            "text": "Swipe up to check",
+                                            "alignX": "center",
+                                            "visible": false
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "efec661f-a120-165e-025d-40a28c130fd2",
+                                        "type": "Group",
+                                        "version": 2,
+                                        "x": 338,
+                                        "y": 717,
+                                        "parameters": {},
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": [
+                                            {
+                                                "id": "98712f9a-1cd8-16ed-f538-ef5c25ce3f5a",
+                                                "type": "Rectangle",
+                                                "x": 358,
+                                                "y": 763,
+                                                "parameters": {
+                                                    "height": {
+                                                        "value": 40,
+                                                        "unit": "px"
+                                                    },
+                                                    "color": "#000000",
+                                                    "blendMode": "alpha",
+                                                    "visible": true,
+                                                    "cornerRadius": 20,
+                                                    "opacity": 0.8
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            },
+                                            {
+                                                "id": "7a018b50-a109-9f36-4a1e-1c62df41e59d",
+                                                "type": "Rectangle",
+                                                "x": 358,
+                                                "y": 809,
+                                                "parameters": {
+                                                    "cornerRadius": 20,
+                                                    "height": {
+                                                        "value": 40,
+                                                        "unit": "px"
+                                                    },
+                                                    "blur": 5,
+                                                    "blendMode": "solid"
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            },
+                                            {
+                                                "id": "4b4d8a4a-9160-1012-4ec3-648fca5f895e",
+                                                "type": "Text",
+                                                "version": 2,
+                                                "x": 358,
+                                                "y": 911,
+                                                "parameters": {
+                                                    "alignX": "center",
+                                                    "color": "#000000",
+                                                    "text": "All tasks completed",
+                                                    "fontSize": 40,
+                                                    "blendMode": "alpha",
+                                                    "visible": false
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "9e1ddf98-03b0-0ec5-a7f7-2fd9818ad9e8",
+                                "type": "Stack Layout",
+                                "x": 318,
+                                "y": 1008,
+                                "parameters": {
+                                    "height": {
+                                        "value": 500,
+                                        "unit": "px"
+                                    },
+                                    "y": 200
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "2250217a-c8d7-24ea-baf7-e42aa73d37ec",
+                                        "type": "/Drag items",
+                                        "x": 338,
+                                        "y": 1090,
+                                        "parameters": {
+                                            "Text": "Important!",
+                                            "Title": "Passport"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "e2378473-f8c3-8ee3-f695-f2c333ddfc14",
+                                        "type": "/Drag items",
+                                        "x": 338,
+                                        "y": 1192,
+                                        "parameters": {
+                                            "Text": "The blue one",
+                                            "Title": "Toothbrush"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "9061e2bb-c403-c4be-6b62-be53e2ce4d1a",
+                                        "type": "/Drag items",
+                                        "x": 338,
+                                        "y": 1294,
+                                        "parameters": {
+                                            "Text": "Small bottles",
+                                            "Title": "Shampoo"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1c182db0-b7ae-80cb-0636-d89151975c05",
+                        "type": "Number Remapper",
+                        "x": 1431.777284520257,
+                        "y": 820.8333333333333,
+                        "parameters": {
+                            "maxOutputValue": 100
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "bd8f6911-5454-e53c-7fdd-79a0fbfeb1bc",
+                        "type": "Counter",
+                        "x": 1136.8740089320984,
+                        "y": 849.8333333333333,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "18058cc9-2465-8042-9552-e854b951d0bb",
+                        "type": "Transition",
+                        "x": 1433.777284520257,
+                        "y": 691.8333333333333,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "6ba740ca-b1ad-5dad-a782-a0745fb19311",
+                        "type": "Expression",
+                        "x": 1184.888746436109,
+                        "y": 619.1159423123945,
+                        "parameters": {
+                            "expression": "(currentValue == 100)"
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "currentValue",
+                                "type": "number",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "43a8c3dc-e2e1-2e0e-a8d2-4fbfaa239ad6",
+                        "type": "Color Blend",
+                        "x": 1180.888746436109,
+                        "y": 506.01921790055303,
+                        "parameters": {
+                            "color 0": "#704F5B",
+                            "color 1": "#009300"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "16f532f4-5603-ab6d-a7af-0fa28109cb6c",
+                        "type": "Page Navigation Back",
+                        "x": 544.5214656210813,
+                        "y": 498.6897525203283,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "7d0767b2-cad6-e615-96b4-1ca0a5486c09",
+                        "type": "Component Outputs",
+                        "x": 1506.829829179483,
+                        "y": 378.21756044126107,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "All checked",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "53b49557-fc44-b896-3902-adf5760afc49",
+                        "type": "Send Message",
+                        "x": 1559.7200598483419,
+                        "y": 523.6656947806226,
+                        "parameters": {
+                            "topic": "FullChecklist",
+                            "publishOnInputsChanged": true
+                        },
+                        "ports": [
+                            {
+                                "name": "Value",
+                                "plug": "input",
+                                "type": {
+                                    "name": "*",
+                                    "allowConnectionOnly": true
+                                },
+                                "group": "Payload",
+                                "index": 1
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/Full transport info/Transit Info",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "7b093c62-489d-6ab6-944e-79cde6b41824",
+                        "fromProperty": "touch.tap",
+                        "toId": "c78d3f06-b7f3-7f39-7950-b2c3e6258ee0",
+                        "toProperty": "back"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "c71af80f-77b4-04ae-ce64-dbefab7fcc27",
+                        "type": "Page",
+                        "x": 466,
+                        "y": 275,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "49b35c2d-b1a4-ee67-62ff-1fbfc39b7550",
+                                "type": "Rectangle",
+                                "label": "Background",
+                                "x": 20,
+                                "y": 92,
+                                "parameters": {},
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": []
+                            },
+                            {
+                                "id": "468625c9-7826-4f62-10ef-14331c874d88",
+                                "type": "Stack Layout",
+                                "x": 20,
+                                "y": 107,
+                                "parameters": {
+                                    "orientation": "vertical"
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "c7cb764b-f960-a41b-8343-e0f7b7b0b93d",
+                                        "type": "Group",
+                                        "version": 2,
+                                        "label": "Left Group",
+                                        "x": 20,
+                                        "y": 46,
+                                        "parameters": {
+                                            "height": {
+                                                "value": 50,
+                                                "unit": "%"
+                                            }
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": [
+                                            {
+                                                "id": "ba7225ef-a7fa-6be4-5279-b0d7440ef4c9",
+                                                "type": "Image",
+                                                "version": 2,
+                                                "x": 20,
+                                                "y": 61,
+                                                "parameters": {
+                                                    "image": "map.jpg",
+                                                    "color": "#ffffff",
+                                                    "alignX": "center",
+                                                    "alignY": "center",
+                                                    "scaleX": 0.8,
+                                                    "scaleY": 0.8,
+                                                    "sizeMode": "explicit",
+                                                    "fillMode": "fill",
+                                                    "rotationZ": 90,
+                                                    "blendMode": "alpha",
+                                                    "x": -50
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            },
+                                            {
+                                                "id": "76a762da-2f6d-a935-b702-8861490dcd1d",
+                                                "type": "/UI Kit/Controls/Small Button Icon2",
+                                                "x": 20,
+                                                "y": 122,
+                                                "parameters": {
+                                                    "Rotation Z": 90,
+                                                    "Align Y": "center",
+                                                    "Align X": "right",
+                                                    "Width": {
+                                                        "value": 400,
+                                                        "unit": "px"
+                                                    },
+                                                    "Height": {
+                                                        "value": 80,
+                                                        "unit": "px"
+                                                    },
+                                                    "Rounded": true,
+                                                    "Image Path": "placeholder.png",
+                                                    "Label": "Get directrions",
+                                                    "Position X": 50
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            },
+                                            {
+                                                "id": "7b093c62-489d-6ab6-944e-79cde6b41824",
+                                                "type": "Image",
+                                                "version": 2,
+                                                "x": 20,
+                                                "y": 168,
+                                                "parameters": {
+                                                    "alignX": "right",
+                                                    "alignY": "top",
+                                                    "color": "#000000",
+                                                    "y": 25,
+                                                    "x": -50,
+                                                    "depth": 4,
+                                                    "image": "UIKit/images/arrow.png",
+                                                    "rotationZ": 270
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "158cbad5-c391-a638-0dec-5d43cf611d56",
+                                        "type": "Group",
+                                        "version": 2,
+                                        "label": "Right Group",
+                                        "x": 20,
+                                        "y": 168,
+                                        "parameters": {
+                                            "height": {
+                                                "value": 50,
+                                                "unit": "%"
+                                            }
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": [
+                                            {
+                                                "id": "bb21961f-8f50-7050-2e69-f9551b8142d6",
+                                                "type": "Stack Layout",
+                                                "x": 20,
+                                                "y": 61,
+                                                "parameters": {
+                                                    "orientation": "horizontal",
+                                                    "itemSpacing": 50,
+                                                    "alignX": "left",
+                                                    "alignY": "top",
+                                                    "x": 0,
+                                                    "paddingLeft": 150
+                                                },
+                                                "ports": [],
+                                                "dynamicports": [],
+                                                "children": [
+                                                    {
+                                                        "id": "737e61e1-2e52-cac0-839b-f0cf3d67be0f",
+                                                        "type": "/Full transport info/Parking status",
+                                                        "x": 20,
+                                                        "y": 46,
+                                                        "parameters": {
+                                                            "Label": "Departures 3",
+                                                            "Number": 45,
+                                                            "Minutes walk": 7
+                                                        },
+                                                        "ports": [],
+                                                        "dynamicports": [],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "id": "f33e8c26-c767-c0a4-299d-66424d7bcfc0",
+                                                        "type": "/Full transport info/Parking status",
+                                                        "x": 20,
+                                                        "y": 92,
+                                                        "parameters": {
+                                                            "Label": "Terminal 2",
+                                                            "Number": "8",
+                                                            "Red text": 1,
+                                                            "Minutes walk": 3
+                                                        },
+                                                        "ports": [],
+                                                        "dynamicports": [],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "id": "ebacfadd-285b-1599-0cfc-765da66be949",
+                                                        "type": "/Full transport info/Parking status",
+                                                        "x": 20,
+                                                        "y": 138,
+                                                        "parameters": {
+                                                            "Label": "Main House",
+                                                            "Number": "32",
+                                                            "Minutes walk": 10
+                                                        },
+                                                        "ports": [],
+                                                        "dynamicports": [],
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "id": "5a268a71-45d7-62f0-5f2f-500de284a6a2",
+                                                        "type": "Text",
+                                                        "version": 2,
+                                                        "x": 20,
+                                                        "y": 184,
+                                                        "parameters": {
+                                                            "color": "#000000",
+                                                            "text": "Current Parking status",
+                                                            "fontSize": 60,
+                                                            "alignX": "left",
+                                                            "alignY": "top",
+                                                            "y": 300,
+                                                            "fontFamily": "Arial",
+                                                            "x": -200,
+                                                            "rotationZ": 90
+                                                        },
+                                                        "ports": [],
+                                                        "dynamicports": [],
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "c78d3f06-b7f3-7f39-7950-b2c3e6258ee0",
+                        "type": "Page Navigation Back",
+                        "x": 841.0150379333483,
+                        "y": 438.1809922521708,
+                        "parameters": {},
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    }
+                ]
+            }
+        },
+        {
+            "name": "/Full transport info/Parking status",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "2f6dd2e9-689c-b709-1c0d-e08f780b2c4f",
+                        "fromProperty": "Label",
+                        "toId": "f98d26a2-9c86-a29e-0594-aea417727d78",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "c985e4ee-dbba-138a-e722-bd201c511c4e",
+                        "fromProperty": "result",
+                        "toId": "ede36201-3c79-9d32-2aba-9b34efec646c",
+                        "toProperty": "color"
+                    },
+                    {
+                        "fromId": "2f6dd2e9-689c-b709-1c0d-e08f780b2c4f",
+                        "fromProperty": "Number",
+                        "toId": "ede36201-3c79-9d32-2aba-9b34efec646c",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "2f6dd2e9-689c-b709-1c0d-e08f780b2c4f",
+                        "fromProperty": "Red text",
+                        "toId": "c985e4ee-dbba-138a-e722-bd201c511c4e",
+                        "toProperty": "blendValue"
+                    },
+                    {
+                        "fromId": "4e513d0d-9a6f-320d-727f-52cd70657873",
+                        "fromProperty": "formatted",
+                        "toId": "57684530-27b3-6baa-14e7-7c5c725c021f",
+                        "toProperty": "text"
+                    },
+                    {
+                        "fromId": "2f6dd2e9-689c-b709-1c0d-e08f780b2c4f",
+                        "fromProperty": "Minutes walk",
+                        "toId": "4e513d0d-9a6f-320d-727f-52cd70657873",
+                        "toProperty": "number"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "2f6dd2e9-689c-b709-1c0d-e08f780b2c4f",
+                        "type": "Component Inputs",
+                        "x": 68.08508741067834,
+                        "y": 380.50377622274084,
+                        "parameters": {},
+                        "ports": [
+                            {
+                                "name": "Label",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 1
+                            },
+                            {
+                                "name": "Number",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 2
+                            },
+                            {
+                                "name": "Red text",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 3
+                            },
+                            {
+                                "name": "Minutes walk",
+                                "plug": "output",
+                                "type": {
+                                    "name": "*"
+                                },
+                                "index": 4
+                            }
+                        ],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "c985e4ee-dbba-138a-e722-bd201c511c4e",
+                        "type": "Color Blend",
+                        "x": 354.69946776811514,
+                        "y": 549.498520264479,
+                        "parameters": {
+                            "color 0": "#bbbb00",
+                            "color 1": "#a60000"
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "5df6a5e1-ef96-59fb-f2ce-fd0c58a174cd",
+                        "type": "Group",
+                        "version": 2,
+                        "x": 582.4031173204687,
+                        "y": 197.70700588056064,
+                        "parameters": {
+                            "sizeMode": "explicit",
+                            "width": {
+                                "value": 150,
+                                "unit": "px"
+                            },
+                            "height": {
+                                "value": 750,
+                                "unit": "px"
+                            }
+                        },
+                        "ports": [],
+                        "dynamicports": [],
+                        "children": [
+                            {
+                                "id": "c649cd86-d83e-c003-1c19-be954a576626",
+                                "type": "Group",
+                                "version": 2,
+                                "x": 20,
+                                "y": 46,
+                                "parameters": {
+                                    "width": {
+                                        "value": 150,
+                                        "unit": "px"
+                                    },
+                                    "height": {
+                                        "value": 600,
+                                        "unit": "px"
+                                    }
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "1bc25f7f-d9c8-23fe-9fdc-7c4e4ddfffaa",
+                                        "type": "Rectangle",
+                                        "label": "Rectangle",
+                                        "x": 20,
+                                        "y": 46,
+                                        "parameters": {
+                                            "color": "#c0c0c0",
+                                            "width": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            },
+                                            "height": {
+                                                "value": 100,
+                                                "unit": "%"
+                                            },
+                                            "cornerRadius": 20
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "f98d26a2-9c86-a29e-0594-aea417727d78",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 92,
+                                        "parameters": {
+                                            "rotationZ": 90,
+                                            "alignY": "top",
+                                            "alignX": "center",
+                                            "x": 0,
+                                            "y": 150,
+                                            "fontSize": 60,
+                                            "color": "#000000",
+                                            "verticalAlignment": "top",
+                                            "alignment": "left",
+                                            "sizeMode": "childSize"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "c35db53c-2000-4a25-af18-f3aa0b20ed05",
+                                        "type": "Rectangle",
+                                        "x": 20,
+                                        "y": 174,
+                                        "parameters": {
+                                            "width": {
+                                                "value": 125,
+                                                "unit": "px"
+                                            },
+                                            "height": {
+                                                "value": 150,
+                                                "unit": "px"
+                                            },
+                                            "color": "#808080",
+                                            "alignX": "center",
+                                            "alignY": "bottom",
+                                            "x": 0,
+                                            "y": -50,
+                                            "cornerRadius": 20
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "ede36201-3c79-9d32-2aba-9b34efec646c",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 220,
+                                        "parameters": {
+                                            "rotationZ": 90,
+                                            "alignX": "center",
+                                            "alignY": "bottom",
+                                            "text": "70",
+                                            "fontSize": 80,
+                                            "y": -70,
+                                            "fontFamily": "Arial Black",
+                                            "visible": true,
+                                            "color": "#bbbb00"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "6d32ef21-bff9-5306-7696-eda5ef41ef26",
+                                "type": "Group",
+                                "version": 2,
+                                "x": 20,
+                                "y": 383,
+                                "parameters": {
+                                    "y": 50
+                                },
+                                "ports": [],
+                                "dynamicports": [],
+                                "children": [
+                                    {
+                                        "id": "57684530-27b3-6baa-14e7-7c5c725c021f",
+                                        "type": "Text",
+                                        "version": 2,
+                                        "x": 20,
+                                        "y": 46,
+                                        "parameters": {
+                                            "color": "#000000",
+                                            "rotationZ": 90,
+                                            "alignX": "center",
+                                            "alignY": "bottom"
+                                        },
+                                        "ports": [],
+                                        "dynamicports": [],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "4e513d0d-9a6f-320d-727f-52cd70657873",
+                        "type": "String Format",
+                        "x": 345.4031173204687,
+                        "y": 759.7070058805606,
+                        "parameters": {
+                            "format": "{number} min walk\nto terminal."
+                        },
+                        "ports": [],
+                        "dynamicports": [
+                            {
+                                "name": "number",
+                                "type": "*",
+                                "plug": "input",
+                                "index": 2
+                            }
+                        ],
+                        "children": []
                     }
                 ]
             }
@@ -18524,6 +19824,6 @@
         "Default Device.canvasWidth": 1080,
         "Default Device.canvasHeight": 1920
     },
-    "rootNodeId": "c9412b56-f788-f519-e31c-eee1291aa4b2",
+    "rootNodeId": "109c5915-0af8-a4c9-0aec-dafb3517bd19",
     "version": "1"
 }
